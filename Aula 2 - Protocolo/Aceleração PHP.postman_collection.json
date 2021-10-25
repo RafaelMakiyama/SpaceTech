@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "7190108c-9bba-464c-b974-5ff3ca426630",
+		"name": "Aceleração PHP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Teste de requisição",
+			"item": [
+				{
+					"name": "Buscar distritos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://servicodados.ibge.gov.br/api/v1/localidades/distritos",
+							"protocol": "https",
+							"host": [
+								"servicodados",
+								"ibge",
+								"gov",
+								"br"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"distritos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Mesorregioes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar regioes intermediarias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://servicodados.ibge.gov.br/api/v1/localidades/regioes-intermediarias/4104|4105",
+							"protocol": "https",
+							"host": [
+								"servicodados",
+								"ibge",
+								"gov",
+								"br"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"regioes-intermediarias",
+								"4104|4105"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regiões imetdiatas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://servicodados.ibge.gov.br/api/v1/localidades/regioes-imediatas/130001",
+							"protocol": "https",
+							"host": [
+								"servicodados",
+								"ibge",
+								"gov",
+								"br"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"regioes-imediatas",
+								"130001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar paises",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://servicodados.ibge.gov.br/api/v1/localidades/paises",
+							"protocol": "https",
+							"host": [
+								"servicodados",
+								"ibge",
+								"gov",
+								"br"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"paises"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar municipios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://servicodados.ibge.gov.br/api/v1/localidades/municipios/3550308/distritos",
+							"protocol": "https",
+							"host": [
+								"servicodados",
+								"ibge",
+								"gov",
+								"br"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"municipios",
+								"3550308",
+								"distritos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Albuns",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/albums",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts?userId=1",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts?userId=1&title=um titulo&body=corpo",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "title",
+									"value": "um titulo"
+								},
+								{
+									"key": "body",
+									"value": "corpo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar album",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts/1/?userId=1&id=1&title=10239123",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts",
+								"1",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "title",
+									"value": "10239123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://servicodados.ibge.gov.br/api/v1/localidades/distritos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://servicodados.ibge.gov.br/api/v1/localidades/distritos",
+							"protocol": "https",
+							"host": [
+								"servicodados",
+								"ibge",
+								"gov",
+								"br"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"distritos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
