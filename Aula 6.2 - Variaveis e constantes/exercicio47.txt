@@ -1,0 +1,1 @@
+{"id":1957,"uid":"ebc64d75-8808-44c7-91c1-c9e1e18552a0","plan":"Business","status":"Idle","payment_method":"Debit card","subscription_term":"Triennal","payment_term":"Monthly"}
