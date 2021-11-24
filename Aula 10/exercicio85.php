@@ -8,6 +8,10 @@ interface Personagem {
     public function lutar();
 }
 
+abstract class Reinado implements Personagem {
+    public function lutar(){}
+}
+
 class Machado implements Arma{
     public function usarArma(){
         echo "está usando machado";
@@ -33,7 +37,7 @@ class ArcoEFlexa{
 }
 
 
-class Rei implements Personagem{
+class Rei extends Reinado implements Personagem{
     public function lutar(){ 
         echo "está usando o personagem REI";
     }    
@@ -51,10 +55,10 @@ class Guerreiro implements Personagem {
     }
 }
 
-class Rainha implements Personagem{
+class Rainha extends Reinado implements Personagem{
     public function lutar(){ 
         echo "está usando personagem rainha";
-        
+
     }
 }
 
