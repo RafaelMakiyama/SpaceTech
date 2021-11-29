@@ -19,7 +19,7 @@ interface IEmailServices
       function Enviar(string $de, string $para, string $assunto, string $mensagem);
    }
 
-public class EmailServices implements IEmailServices
+ class EmailServices implements IEmailServices
    {
        function IsValid(string $email)
        {
@@ -34,18 +34,18 @@ public class EmailServices implements IEmailServices
        }
    }
 
-public class ClienteServices implements IClienteServices
+class ClienteServices implements IClienteServices
    {
        private IClienteRepository $clienteRepository;
        private IEmailServices $emailServices;
 
-       public $clienteServices(IEmailServices $emailServices, IClienteRepository $clienteRepository)
+       public function clienteServices(IEmailServices $emailServices, IClienteRepository $clienteRepository)
        {
            $this->emailServices = $emailServices;
            $this->clienteRepository = $clienteRepository;
        }
 
-       public string AdicionarCliente(Cliente $cliente)
+       public function  AdicionarCliente(Cliente $cliente)
        {
            if (!$cliente->IsValid())
                echo "Dados inválidos";
