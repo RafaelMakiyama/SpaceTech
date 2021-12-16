@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\SignatureController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/perfil',[ UserController::class, 'profile']);
+
+
+Route::resource('/documentos', DocumentController::class);
+Route::resource('/assinaturas', SignatureController::class);
