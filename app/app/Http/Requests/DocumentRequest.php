@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class DocumentRequest extends FormRequest
 {
@@ -45,5 +47,13 @@ class DocumentRequest extends FormRequest
             'responsable_signature.min'=> 'O campo responsável pela assinatura deve conter no minimo 10 caracteres e no maximo 200',
             'responsable_signature.max'=> 'O campo responsável pela assinatura deve conter no minimo 10 caracteres e no maximo 200',
         ] ;
+    }
+
+    public function failedValidation(Validator $validator){
+        throw new HttpResponseException(response()->json([
+            'success'   => false,
+            'message'   => 'Algo de errado aconteceu, siga as instruções das mensagens.',
+            'data'      => $validator->errors()
+        ]));
     }
 }

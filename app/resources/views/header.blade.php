@@ -23,6 +23,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{route('documentos.index') }} ">Documentos</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('assinaturas.index') }} ">Assinaturas</a>
+              </li>
             </ul>
           </div>
         </div>

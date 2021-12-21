@@ -16,9 +16,9 @@ class DocumentsFactory extends Factory
         return [
             'title' => $this->faker->name(),
             'size' => $this->faker->numberBetween(1, 20000),
-            'numberSignatures'=> $this->faker->numberBetween(1,500),
-            'responsableSignature' => $this->faker->name(),
-            'pagesQuanties'=> $this->faker->numberBetween(1,10),
+            'number_signature'=> $this->faker->numberBetween(1,500),
+            'responsable_signature' => $this->faker->name(),
+            'pages_quanties'=> $this->faker->numberBetween(1,10),
         ];
     }
 }

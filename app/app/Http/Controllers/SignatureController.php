@@ -99,6 +99,13 @@ class SignatureController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $signature = Signature::find($id);
+
+        if(!$signature):
+            return redirect()->back();
+        endif;
+
+        $document->delete();
+        return redirect()->route('documentos.index')->with('message', "Assinatura {$signature->id} deletado com sucesso");
     }
 }

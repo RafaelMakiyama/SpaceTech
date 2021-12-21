@@ -6,6 +6,7 @@ use App\Http\Requests\DocumentRequest;
 use App\Models\Documents;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use League\CommonMark\Node\Block\Document;
 
 class DocumentController extends Controller
 {
@@ -99,6 +100,13 @@ class DocumentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $document = Documents::find($id);
+
+        if(!$document):
+            return redirect()->back();
+        endif;
+
+        $document->delete();
+        return redirect()->route('documentos.index')->with('message', "Documento {$document->id} deletado com sucesso");
     }
 }
